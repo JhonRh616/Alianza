@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "57486cbc-5234-4622-b1ce-a389a1350088",
+		"name": "Alianza",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14136236"
+	},
+	"item": [
+		{
+			"name": "GetAll Clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/alianza/v1/clients/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alianza",
+						"v1",
+						"clients",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"sharedKey\":\"tramos\",\r\n\t\"bussinessId\":\"Tania Ramos\",\r\n\t\"email\":\"tramos@gmail.com\",\r\n\t\"phone\":\"3219876543\",\r\n\t\"dateAdded\":\"20/05/2029\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/alianza/v1/clients/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alianza",
+						"v1",
+						"clients",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consult Client By Filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/alianza/v1/clients/consult?sharedKey=jgutierrez&bussinessId=Juliana Gutierrez&email=jgutierrez@gmail.com&phone=3219876543&dateAdded=20/05/2029",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alianza",
+						"v1",
+						"clients",
+						"consult"
+					],
+					"query": [
+						{
+							"key": "sharedKey",
+							"value": "jgutierrez"
+						},
+						{
+							"key": "bussinessId",
+							"value": "Juliana Gutierrez"
+						},
+						{
+							"key": "email",
+							"value": "jgutierrez@gmail.com"
+						},
+						{
+							"key": "phone",
+							"value": "3219876543"
+						},
+						{
+							"key": "dateAdded",
+							"value": "20/05/2029"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
